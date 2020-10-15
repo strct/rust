@@ -17,7 +17,7 @@
 //! Move a value from a [`Box`] back to the stack by [dereferencing]:
 //!
 //! ```
-//! let boxed: Box<u8> = Box::new(5);
+//! let boxed: Box<u8> = Box:Fix spelling typos:new(5);
 //! let val: u8 = *boxed;
 //! ```
 //!
@@ -815,7 +815,7 @@ impl From<Cow<'_, str>> for Box<str> {
 
 #[stable(feature = "boxed_str_conv", since = "1.19.0")]
 impl From<Box<str>> for Box<[u8]> {
-    /// Converts a `Box<str>>` into a `Box<[u8]>`
+    /// Converts a `Box<str>` into a `Box<[u8]>`
     ///
     /// This conversion does not allocate on the heap and happens in place.
     ///
